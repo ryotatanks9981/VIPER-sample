@@ -17,6 +17,14 @@ final class ArticleListViewController: UIViewController {
     
     var presenter:ArticleListPresentation!
     
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.tableFooterView = UIView()
+        tableView.register(ArticleCell.self, forCellReuseIdentifier: ArticleCell.id)
+        tableView.backgroundColor = .white
+        return tableView
+    }()
+    
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "検索ワード"
@@ -27,14 +35,18 @@ final class ArticleListViewController: UIViewController {
     private var articles: [ArticleEntity] = [] {
         didSet {
             DispatchQueue.main.async {
-//                self.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
-    
+
     override func viewDidLoad() {
         navigationItem.titleView = searchBar
+        view.addSubview(tableView)
+        tableView.frame = view.bounds
         
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 }
 
@@ -55,7 +67,27 @@ extension ArticleListViewController: ArticleListView {
 extension ArticleListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
-        print(text)
+        presenter.searchButtonDidPush(searchText: text)
         searchBar.resignFirstResponder()
+    }
+}
+
+extension ArticleListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.articles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCell.id, for: indexPath) as! ArticleCell
+        cell.setArticle(articles[indexPath.row])
+        return cell
+    }
+    
+    
+}
+
+extension ArticleListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(articles[indexPath.row])
     }
 }

@@ -30,6 +30,7 @@ extension ArticleListPresenter: ArticleListPresentation {
         articleListInteractor.fetchArticles(keyword: searchText) { [weak self] result in
             switch result {
             case .success(let articles):
+                print(articles)
                 self?.view?.updateArticles(articles)
                 break
             case .failure(let error):

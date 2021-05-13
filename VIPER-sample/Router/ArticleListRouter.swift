@@ -23,9 +23,9 @@ final class ArticleListRouter {
     static func assembleModule() -> UIViewController {
         let view = ArticleListViewController()
         let router = ArticleListRouter(viewController: view)
-        
-        let presenter = ArticleListPresenter(view: view)
-        
+        let articleListInteractor = ArticleListInteractor()
+        let presenter = ArticleListPresenter(view: view, router: router, articleListInteractor: articleListInteractor)
+        view.presenter = presenter
         return view
     }
     

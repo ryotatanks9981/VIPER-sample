@@ -52,7 +52,7 @@ extension QiitaRequest {
 final class QiitaAPI {
     struct SearchArticles: QiitaRequest {
         
-        typealias Response = SearchResponseEntity<UserEntity>
+        typealias Response = SearchResponseEntity<ArticleEntity>
         
         let keyword: String
         var method: HTTPMethod {

@@ -14,6 +14,9 @@ protocol ArticleListView: AnyObject {
 }
 
 final class ArticleListViewController: UIViewController {
+    
+    var presenter:ArticleListPresentation!
+    
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "検索ワード"

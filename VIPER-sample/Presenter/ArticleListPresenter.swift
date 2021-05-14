@@ -10,6 +10,7 @@ import Foundation
 protocol ArticleListPresentation: AnyObject {
     func searchButtonDidPush(searchText: String)
     func didSelect(article: ArticleEntity)
+    func pulldown(searchText: String)
 }
 
 final class ArticleListPresenter {
@@ -30,7 +31,6 @@ extension ArticleListPresenter: ArticleListPresentation {
         articleListInteractor.fetchArticles(keyword: searchText) { [weak self] result in
             switch result {
             case .success(let articles):
-                print(articles)
                 self?.view?.updateArticles(articles)
                 break
             case .failure(let error):
@@ -42,5 +42,19 @@ extension ArticleListPresenter: ArticleListPresentation {
     
     func didSelect(article: ArticleEntity) {
         router.showArticleDetail(article: article)
+    }
+    
+    func pulldown(searchText: String) {
+        guard !searchText.isEmpty else { return }
+        articleListInteractor.fetchArticles(keyword: searchText) { [weak self] result in
+            switch result {
+            case .success(let articles):
+                self?.view?.updateArticles(articles)
+                break
+            case .failure(let error):
+                self?.view?.showError(error: error)
+                break
+            }
+        }
     }
 }

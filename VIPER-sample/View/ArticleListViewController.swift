@@ -17,7 +17,7 @@ final class ArticleListViewController: UIViewController {
     
     var presenter:ArticleListPresentation!
     
-    private let tableView: UITableView = {
+    private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.tableFooterView = UIView()
         tableView.register(ArticleCell.self, forCellReuseIdentifier: ArticleCell.id)
@@ -31,6 +31,8 @@ final class ArticleListViewController: UIViewController {
         searchBar.delegate = self
         return searchBar
     }()
+    
+    private let refreshControl = UIRefreshControl()
     
     private var articles: [ArticleEntity] = [] {
         didSet {
@@ -47,6 +49,14 @@ final class ArticleListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(pulldown(sender:)), for: .valueChanged)
+    }
+    
+    @objc private func pulldown(sender: UIRefreshControl) {
+        guard let text = searchBar.text else { return }
+        presenter.pulldown(searchText: text)
+        refreshControl.endRefreshing()
     }
 }
 
@@ -88,6 +98,6 @@ extension ArticleListViewController: UITableViewDataSource {
 
 extension ArticleListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(articles[indexPath.row])
+        presenter.didSelect(article: articles[indexPath.row])
     }
 }

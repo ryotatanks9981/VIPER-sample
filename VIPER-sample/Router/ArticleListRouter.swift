@@ -33,6 +33,7 @@ final class ArticleListRouter {
 
 extension ArticleListRouter: ArticleListWriteframe {
     func showArticleDetail(article: ArticleEntity) {
-        
+        let viewController = RepositoryDetailRouter.assembleModule(repository: article)
+        self.viewController.navigationController?.pushViewController(viewController, animated: true)
     }
 }

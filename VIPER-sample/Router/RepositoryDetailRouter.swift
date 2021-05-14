@@ -18,7 +18,16 @@ class RepositoryDetailRouter {
         self.viewController = viewController
     }
     
-    static func assembleModule(repository: ArticleEntity) {
+    static func assembleModule(repository: ArticleEntity) -> UIViewController {
+        let view = RepositoryDetailViewController()
+        let router = RepositoryDetailRouter(viewController: view)
+        let presenter = RepositoryDetailPresenter(view: view, router: router, repository: repository)
+        view.presenter = presenter
         
+        return view
     }
+}
+
+extension RepositoryDetailRouter: RepositoryDetailWriteframe {
+    
 }

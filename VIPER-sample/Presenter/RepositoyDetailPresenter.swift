@@ -6,3 +6,25 @@
 //
 
 import Foundation
+
+protocol RepositoryDetailPresentation: AnyObject {
+    func viewDidLoad()
+}
+
+class RepositoryDetailPresenter {
+    private weak var view: RepositoryDetailView?
+    private let router: RepositoryDetailWriteframe
+    private let repository: ArticleEntity
+    
+    init(view: RepositoryDetailView, router: RepositoryDetailWriteframe, repository: ArticleEntity) {
+        self.view = view
+        self.router = router
+        self.repository = repository
+    }
+}
+
+extension RepositoryDetailPresenter: RepositoryDetailPresentation {
+    func viewDidLoad() {
+        view?.load(request: URLRequest(url: repository.htmlURL))
+    }
+}

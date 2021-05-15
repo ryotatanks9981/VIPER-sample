@@ -27,17 +27,7 @@ final class ArticleListPresenter {
 
 extension ArticleListPresenter: ArticleListPresentation {
     func searchButtonDidPush(searchText: String) {
-        guard !searchText.isEmpty else { return }
-        articleListInteractor.fetchArticles(keyword: searchText) { [weak self] result in
-            switch result {
-            case .success(let articles):
-                self?.view?.updateArticles(articles)
-                break
-            case .failure(let error):
-                self?.view?.showError(error: error)
-                break
-            }
-        }
+        fetchArticles(searchText: searchText)
     }
     
     func didSelect(article: ArticleEntity) {
@@ -45,6 +35,10 @@ extension ArticleListPresenter: ArticleListPresentation {
     }
     
     func pulldown(searchText: String) {
+        fetchArticles(searchText: searchText)
+    }
+    
+    private func fetchArticles(searchText: String) {
         guard !searchText.isEmpty else { return }
         articleListInteractor.fetchArticles(keyword: searchText) { [weak self] result in
             switch result {

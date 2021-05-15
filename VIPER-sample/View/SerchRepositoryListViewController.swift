@@ -8,19 +8,19 @@
 import Foundation
 import UIKit
 
-protocol ArticleListView: AnyObject {
-    func updateArticles(_ articles: [ArticleEntity])
+protocol SearchRepositoryListView: AnyObject {
+    func updateArticles(_ articles: [RepositoryEntity])
     func showError(error: Error)
 }
 
-final class ArticleListViewController: UIViewController {
+final class SerchRepositoryListViewController: UIViewController {
     
-    var presenter:ArticleListPresentation!
+    var presenter: SearchRepositoryListPresentation!
     
     private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.tableFooterView = UIView()
-        tableView.register(ArticleCell.self, forCellReuseIdentifier: ArticleCell.id)
+        tableView.register(RepositoryCell.self, forCellReuseIdentifier: RepositoryCell.id)
         tableView.backgroundColor = .white
         return tableView
     }()
@@ -34,7 +34,7 @@ final class ArticleListViewController: UIViewController {
     
     private let refreshControl = UIRefreshControl()
     
-    private var articles: [ArticleEntity] = [] {
+    private var repository: [RepositoryEntity] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -60,9 +60,9 @@ final class ArticleListViewController: UIViewController {
     }
 }
 
-extension ArticleListViewController: ArticleListView {
-    func updateArticles(_ articles: [ArticleEntity]) {
-        self.articles = articles
+extension SerchRepositoryListViewController: SearchRepositoryListView {
+    func updateArticles(_ articles: [RepositoryEntity]) {
+        self.repository = articles
     }
     func showError(error: Error) {
         let alert = UIAlertController(title: "\(error)", message: "しばらく時間をおいてから再度お試しください", preferredStyle: .alert)
@@ -74,7 +74,7 @@ extension ArticleListViewController: ArticleListView {
     }
 }
 
-extension ArticleListViewController: UISearchBarDelegate {
+extension SerchRepositoryListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
         presenter.searchButtonDidPush(searchText: text)
@@ -82,22 +82,22 @@ extension ArticleListViewController: UISearchBarDelegate {
     }
 }
 
-extension ArticleListViewController: UITableViewDataSource {
+extension SerchRepositoryListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.articles.count
+        return self.repository.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCell.id, for: indexPath) as! ArticleCell
-        cell.setArticle(articles[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.id, for: indexPath) as! RepositoryCell
+        cell.setArticle(repository[indexPath.row])
         return cell
     }
     
     
 }
 
-extension ArticleListViewController: UITableViewDelegate {
+extension SerchRepositoryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.didSelect(article: articles[indexPath.row])
+        presenter.didSelect(repository: repository[indexPath.row])
     }
 }

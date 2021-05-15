@@ -14,9 +14,9 @@ protocol RepositoryDetailPresentation: AnyObject {
 class RepositoryDetailPresenter {
     private weak var view: RepositoryDetailView?
     private let router: RepositoryDetailWriteframe
-    private let repository: ArticleEntity
+    private let repository: RepositoryEntity
     
-    init(view: RepositoryDetailView, router: RepositoryDetailWriteframe, repository: ArticleEntity) {
+    init(view: RepositoryDetailView, router: RepositoryDetailWriteframe, repository: RepositoryEntity) {
         self.view = view
         self.router = router
         self.repository = repository

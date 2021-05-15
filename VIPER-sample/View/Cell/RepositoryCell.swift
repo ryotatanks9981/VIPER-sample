@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ArticleCell: UITableViewCell {
+class RepositoryCell: UITableViewCell {
     
     static let id = "ArticleCell"
     
@@ -31,7 +31,7 @@ class ArticleCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setArticle(_ article: ArticleEntity) {
+    func setArticle(_ article: RepositoryEntity) {
         titleNameLabel.text = article.fullName
         starLabel.text = "Star: \(article.starCount)"
     }

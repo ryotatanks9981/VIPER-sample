@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArticleEntity: Decodable {
+struct RepositoryEntity: Decodable {
     let id: Int
     let name: String
     let fullName: String

@@ -11,7 +11,7 @@ enum HTTPMethod: String {
     case get = "GET"
 }
 
-protocol QiitaRequest {
+protocol GithubRequest {
     associatedtype Response: Decodable
     
     var baseURL: URL { get }
@@ -20,10 +20,9 @@ protocol QiitaRequest {
     var queryItems: [URLQueryItem] { get }
 }
 
-extension QiitaRequest {
+extension GithubRequest {
     var baseURL: URL {
         URL(string: "https://api.github.com")!
-//        URL(string: "http://qiita.com/api/v2/items")!
     }
     
     func buildRequest() -> URLRequest {
@@ -49,10 +48,10 @@ extension QiitaRequest {
     }
 }
 
-final class QiitaAPI {
-    struct SearchArticles: QiitaRequest {
+final class GithubAPI {
+    struct SearchRepository: GithubRequest {
         
-        typealias Response = SearchResponseEntity<ArticleEntity>
+        typealias Response = SearchResponseEntity<RepositoryEntity>
         
         let keyword: String
         var method: HTTPMethod {

@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol QiitaRequestable: AnyObject {
-    func send<Request: QiitaRequest>(request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void)
+protocol GithubRequestable: AnyObject {
+    func send<Request: GithubRequest>(request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void)
 }
 
-class QiitaClient {
+class GithubClient {
     private let session: URLSession
     
     init(session: URLSession = {
@@ -23,9 +23,9 @@ class QiitaClient {
     }
 }
 
-extension QiitaClient: QiitaRequestable {
+extension GithubClient: GithubRequestable {
     
-    func send<Request>(request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void) where Request : QiitaRequest {
+    func send<Request>(request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void) where Request : GithubRequest {
         let urlRequest = request.buildRequest()
         let task = session.dataTask(with: urlRequest) { data, response, error in
             

@@ -7,31 +7,31 @@
 
 import Foundation
 
-protocol ArticleListPresentation: AnyObject {
+protocol SearchRepositoryListPresentation: AnyObject {
     func searchButtonDidPush(searchText: String)
-    func didSelect(article: ArticleEntity)
+    func didSelect(repository: RepositoryEntity)
     func pulldown(searchText: String)
 }
 
-final class ArticleListPresenter {
-    private weak var view: ArticleListView?
-    private let router: ArticleListWriteframe
-    private let articleListInteractor: ArticleListUsecase
+final class SearchRepositoryListPresenter {
+    private weak var view: SearchRepositoryListView?
+    private let router: SearchRepositoryListWriteframe
+    private let articleListInteractor: SearchRepositoryListUsecase
     
-    init(view: ArticleListViewController, router: ArticleListWriteframe, articleListInteractor:ArticleListUsecase) {
+    init(view: SerchRepositoryListViewController, router: SearchRepositoryListWriteframe, articleListInteractor:SearchRepositoryListUsecase) {
         self.view = view
         self.router = router
         self.articleListInteractor = articleListInteractor
     }
 }
 
-extension ArticleListPresenter: ArticleListPresentation {
+extension SearchRepositoryListPresenter: SearchRepositoryListPresentation {
     func searchButtonDidPush(searchText: String) {
         fetchArticles(searchText: searchText)
     }
     
-    func didSelect(article: ArticleEntity) {
-        router.showArticleDetail(article: article)
+    func didSelect(repository: RepositoryEntity) {
+        router.showRepositoryDetail(repository: repository)
     }
     
     func pulldown(searchText: String) {
@@ -40,10 +40,10 @@ extension ArticleListPresenter: ArticleListPresentation {
     
     private func fetchArticles(searchText: String) {
         guard !searchText.isEmpty else { return }
-        articleListInteractor.fetchArticles(keyword: searchText) { [weak self] result in
+        articleListInteractor.fetchRepositories(keyword: searchText) { [weak self] result in
             switch result {
-            case .success(let articles):
-                self?.view?.updateArticles(articles)
+            case .success(let repositories):
+                self?.view?.updateArticles(repositories)
                 break
             case .failure(let error):
                 self?.view?.showError(error: error)

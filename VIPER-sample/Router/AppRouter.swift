@@ -28,7 +28,7 @@ final class AppRouter {
 
 extension AppRouter: AppWriteframe {
     func showArticleListView() {
-        let articleListViewController = ArticleListRouter.assembleModule()
+        let articleListViewController = SearchRepositoryListRouter.assembleModule()
         let navVC = UINavigationController(rootViewController: articleListViewController)
         window.rootViewController = navVC
         window.makeKeyAndVisible()

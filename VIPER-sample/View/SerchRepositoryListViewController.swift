@@ -7,10 +7,13 @@
 
 import Foundation
 import UIKit
+import PKHUD
 
 protocol SearchRepositoryListView: AnyObject {
     func updateArticles(_ articles: [RepositoryEntity])
     func showError(error: Error)
+    func showLoadView()
+    func dismissLoadView()
 }
 
 final class SerchRepositoryListViewController: UIViewController {
@@ -61,6 +64,18 @@ final class SerchRepositoryListViewController: UIViewController {
 }
 
 extension SerchRepositoryListViewController: SearchRepositoryListView {
+    func dismissLoadView() {
+        DispatchQueue.main.async {
+            HUD.hide()
+        }
+    }
+    
+    func showLoadView() {
+        DispatchQueue.main.async {
+            HUD.show(.progress)
+        }
+    }
+    
     func updateArticles(_ articles: [RepositoryEntity]) {
         self.repository = articles
     }

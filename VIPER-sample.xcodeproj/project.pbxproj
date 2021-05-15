@@ -8,15 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		556A8B05264AB0AC00FEE1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B04264AB0AC00FEE1A8 /* AppDelegate.swift */; };
-		556A8B07264AB0AC00FEE1A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B06264AB0AC00FEE1A8 /* SceneDelegate.swift */; };
-		556A8B09264AB0AC00FEE1A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B08264AB0AC00FEE1A8 /* ViewController.swift */; };
-		556A8B0C264AB0AC00FEE1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556A8B0A264AB0AC00FEE1A8 /* Main.storyboard */; };
 		556A8B0E264AB0AD00FEE1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556A8B0D264AB0AD00FEE1A8 /* Assets.xcassets */; };
 		556A8B11264AB0AD00FEE1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556A8B0F264AB0AD00FEE1A8 /* LaunchScreen.storyboard */; };
 		556A8B1C264AB0AD00FEE1A8 /* VIPER_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B1B264AB0AD00FEE1A8 /* VIPER_sampleTests.swift */; };
 		556A8B27264AB0AD00FEE1A8 /* VIPER_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B26264AB0AD00FEE1A8 /* VIPER_sampleUITests.swift */; };
 		556A8B3A264AB10E00FEE1A8 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B39264AB10E00FEE1A8 /* AppRouter.swift */; };
 		556A8B3C264AB2A100FEE1A8 /* AppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B3B264AB2A100FEE1A8 /* AppPresenter.swift */; };
+		556A8B3E264AC18D00FEE1A8 /* RepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B3D264AC18D00FEE1A8 /* RepositoryEntity.swift */; };
+		556A8B40264AC1C700FEE1A8 /* SerchRepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B3F264AC1C700FEE1A8 /* SerchRepositoryListViewController.swift */; };
+		556A8B42264C0AA500FEE1A8 /* SearchRepositoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B41264C0AA500FEE1A8 /* SearchRepositoryListPresenter.swift */; };
+		556A8B44264C0D1D00FEE1A8 /* SearchRepositoryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B43264C0D1D00FEE1A8 /* SearchRepositoryListRouter.swift */; };
+		556A8B46264C0F3600FEE1A8 /* SearchRepositoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B45264C0F3600FEE1A8 /* SearchRepositoryListInteractor.swift */; };
+		556A8B49264C13C500FEE1A8 /* GithubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B48264C13C500FEE1A8 /* GithubClient.swift */; };
+		556A8B4B264C140900FEE1A8 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B4A264C140900FEE1A8 /* GithubAPI.swift */; };
+		556A8B4D264D417E00FEE1A8 /* SearchResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B4C264D417E00FEE1A8 /* SearchResponseEntity.swift */; };
+		556A8B4F264D430400FEE1A8 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B4E264D430400FEE1A8 /* UserEntity.swift */; };
+		556A8B52264D5B8D00FEE1A8 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B51264D5B8D00FEE1A8 /* RepositoryCell.swift */; };
+		556A8B54264E9C5E00FEE1A8 /* RepositoryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B53264E9C5E00FEE1A8 /* RepositoryDetailRouter.swift */; };
+		556A8B56264E9DFF00FEE1A8 /* RepositoyDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B55264E9DFF00FEE1A8 /* RepositoyDetailPresenter.swift */; };
+		556A8B58264E9E8600FEE1A8 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A8B57264E9E8600FEE1A8 /* RepositoryDetailViewController.swift */; };
+		661AC9A74A78DD55516D809E /* Pods_VIPER_sample_VIPER_sampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3807E812E04645810FCF2587 /* Pods_VIPER_sample_VIPER_sampleUITests.framework */; };
+		A0E191216B6E1EA3605085C3 /* Pods_VIPER_sampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A618FB6EFD2F2C827A6B1FF /* Pods_VIPER_sampleTests.framework */; };
+		D1D82B6E5F9FC93278A4DD1E /* Pods_VIPER_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F65770FDE473F90B0322071 /* Pods_VIPER_sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04BA4105C6AED54468B9AF1A /* Pods-VIPER-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-sample.debug.xcconfig"; path = "Target Support Files/Pods-VIPER-sample/Pods-VIPER-sample.debug.xcconfig"; sourceTree = "<group>"; };
+		3689945D862BADDAB880E130 /* Pods-VIPER-sampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-sampleTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPER-sampleTests/Pods-VIPER-sampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3807E812E04645810FCF2587 /* Pods_VIPER_sample_VIPER_sampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_sample_VIPER_sampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F65770FDE473F90B0322071 /* Pods_VIPER_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		556A8B01264AB0AC00FEE1A8 /* VIPER-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		556A8B04264AB0AC00FEE1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		556A8B06264AB0AC00FEE1A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		556A8B08264AB0AC00FEE1A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		556A8B0B264AB0AC00FEE1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		556A8B0D264AB0AD00FEE1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		556A8B10264AB0AD00FEE1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		556A8B12264AB0AD00FEE1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +67,24 @@
 		556A8B28264AB0AD00FEE1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		556A8B39264AB10E00FEE1A8 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		556A8B3B264AB2A100FEE1A8 /* AppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresenter.swift; sourceTree = "<group>"; };
+		556A8B3D264AC18D00FEE1A8 /* RepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEntity.swift; sourceTree = "<group>"; };
+		556A8B3F264AC1C700FEE1A8 /* SerchRepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchRepositoryListViewController.swift; sourceTree = "<group>"; };
+		556A8B41264C0AA500FEE1A8 /* SearchRepositoryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryListPresenter.swift; sourceTree = "<group>"; };
+		556A8B43264C0D1D00FEE1A8 /* SearchRepositoryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryListRouter.swift; sourceTree = "<group>"; };
+		556A8B45264C0F3600FEE1A8 /* SearchRepositoryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryListInteractor.swift; sourceTree = "<group>"; };
+		556A8B48264C13C500FEE1A8 /* GithubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubClient.swift; sourceTree = "<group>"; };
+		556A8B4A264C140900FEE1A8 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		556A8B4C264D417E00FEE1A8 /* SearchResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseEntity.swift; sourceTree = "<group>"; };
+		556A8B4E264D430400FEE1A8 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		556A8B51264D5B8D00FEE1A8 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		556A8B53264E9C5E00FEE1A8 /* RepositoryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailRouter.swift; sourceTree = "<group>"; };
+		556A8B55264E9DFF00FEE1A8 /* RepositoyDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoyDetailPresenter.swift; sourceTree = "<group>"; };
+		556A8B57264E9E8600FEE1A8 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
+		5A618FB6EFD2F2C827A6B1FF /* Pods_VIPER_sampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_sampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A1FAE2D25855A76AE86C4A /* Pods-VIPER-sample-VIPER-sampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-sample-VIPER-sampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPER-sample-VIPER-sampleUITests/Pods-VIPER-sample-VIPER-sampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8BA433BAC7DE75D9992AED5A /* Pods-VIPER-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-sample.release.xcconfig"; path = "Target Support Files/Pods-VIPER-sample/Pods-VIPER-sample.release.xcconfig"; sourceTree = "<group>"; };
+		B672A60D6F6844FCF83E6D5E /* Pods-VIPER-sample-VIPER-sampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-sample-VIPER-sampleUITests.release.xcconfig"; path = "Target Support Files/Pods-VIPER-sample-VIPER-sampleUITests/Pods-VIPER-sample-VIPER-sampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CEAE689E69B48C469474675F /* Pods-VIPER-sampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-sampleTests.release.xcconfig"; path = "Target Support Files/Pods-VIPER-sampleTests/Pods-VIPER-sampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D82B6E5F9FC93278A4DD1E /* Pods_VIPER_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E191216B6E1EA3605085C3 /* Pods_VIPER_sampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +108,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				661AC9A74A78DD55516D809E /* Pods_VIPER_sample_VIPER_sampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12C8F5F6FBE0D7EC5C3F88BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F65770FDE473F90B0322071 /* Pods_VIPER_sample.framework */,
+				3807E812E04645810FCF2587 /* Pods_VIPER_sample_VIPER_sampleUITests.framework */,
+				5A618FB6EFD2F2C827A6B1FF /* Pods_VIPER_sampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		556A8AF8264AB0AC00FEE1A8 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +132,8 @@
 				556A8B1A264AB0AD00FEE1A8 /* VIPER-sampleTests */,
 				556A8B25264AB0AD00FEE1A8 /* VIPER-sampleUITests */,
 				556A8B02264AB0AC00FEE1A8 /* Products */,
+				FF563D29EB84EE28A01B10E7 /* Pods */,
+				12C8F5F6FBE0D7EC5C3F88BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +150,13 @@
 		556A8B03264AB0AC00FEE1A8 /* VIPER-sample */ = {
 			isa = PBXGroup;
 			children = (
+				556A8B47264C13A500FEE1A8 /* Resource */,
 				556A8B38264AB0F800FEE1A8 /* View */,
 				556A8B37264AB0F000FEE1A8 /* Interactor */,
 				556A8B36264AB0E400FEE1A8 /* Presenter */,
 				556A8B35264AB0DD00FEE1A8 /* Entity */,
 				556A8B34264AB0D400FEE1A8 /* Router */,
 				556A8B04264AB0AC00FEE1A8 /* AppDelegate.swift */,
-				556A8B06264AB0AC00FEE1A8 /* SceneDelegate.swift */,
-				556A8B08264AB0AC00FEE1A8 /* ViewController.swift */,
-				556A8B0A264AB0AC00FEE1A8 /* Main.storyboard */,
 				556A8B0D264AB0AD00FEE1A8 /* Assets.xcassets */,
 				556A8B0F264AB0AD00FEE1A8 /* LaunchScreen.storyboard */,
 				556A8B12264AB0AD00FEE1A8 /* Info.plist */,
@@ -141,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				556A8B39264AB10E00FEE1A8 /* AppRouter.swift */,
+				556A8B43264C0D1D00FEE1A8 /* SearchRepositoryListRouter.swift */,
+				556A8B53264E9C5E00FEE1A8 /* RepositoryDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -148,6 +195,9 @@
 		556A8B35264AB0DD00FEE1A8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				556A8B3D264AC18D00FEE1A8 /* RepositoryEntity.swift */,
+				556A8B4C264D417E00FEE1A8 /* SearchResponseEntity.swift */,
+				556A8B4E264D430400FEE1A8 /* UserEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -156,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				556A8B3B264AB2A100FEE1A8 /* AppPresenter.swift */,
+				556A8B41264C0AA500FEE1A8 /* SearchRepositoryListPresenter.swift */,
+				556A8B55264E9DFF00FEE1A8 /* RepositoyDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -163,6 +215,7 @@
 		556A8B37264AB0F000FEE1A8 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				556A8B45264C0F3600FEE1A8 /* SearchRepositoryListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -170,8 +223,42 @@
 		556A8B38264AB0F800FEE1A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				556A8B50264D5B7B00FEE1A8 /* Cell */,
+				556A8B3F264AC1C700FEE1A8 /* SerchRepositoryListViewController.swift */,
+				556A8B57264E9E8600FEE1A8 /* RepositoryDetailViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		556A8B47264C13A500FEE1A8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				556A8B48264C13C500FEE1A8 /* GithubClient.swift */,
+				556A8B4A264C140900FEE1A8 /* GithubAPI.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		556A8B50264D5B7B00FEE1A8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				556A8B51264D5B8D00FEE1A8 /* RepositoryCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FF563D29EB84EE28A01B10E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04BA4105C6AED54468B9AF1A /* Pods-VIPER-sample.debug.xcconfig */,
+				8BA433BAC7DE75D9992AED5A /* Pods-VIPER-sample.release.xcconfig */,
+				68A1FAE2D25855A76AE86C4A /* Pods-VIPER-sample-VIPER-sampleUITests.debug.xcconfig */,
+				B672A60D6F6844FCF83E6D5E /* Pods-VIPER-sample-VIPER-sampleUITests.release.xcconfig */,
+				3689945D862BADDAB880E130 /* Pods-VIPER-sampleTests.debug.xcconfig */,
+				CEAE689E69B48C469474675F /* Pods-VIPER-sampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 556A8B2B264AB0AD00FEE1A8 /* Build configuration list for PBXNativeTarget "VIPER-sample" */;
 			buildPhases = (
+				E1F2FEEB5CB4B9DD774FC308 /* [CP] Check Pods Manifest.lock */,
 				556A8AFD264AB0AC00FEE1A8 /* Sources */,
 				556A8AFE264AB0AC00FEE1A8 /* Frameworks */,
 				556A8AFF264AB0AC00FEE1A8 /* Resources */,
+				ECC15045FCABA6BC8DF5DC59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 556A8B2E264AB0AD00FEE1A8 /* Build configuration list for PBXNativeTarget "VIPER-sampleTests" */;
 			buildPhases = (
+				DCD87F00CDC3B67ED10935C8 /* [CP] Check Pods Manifest.lock */,
 				556A8B13264AB0AD00FEE1A8 /* Sources */,
 				556A8B14264AB0AD00FEE1A8 /* Frameworks */,
 				556A8B15264AB0AD00FEE1A8 /* Resources */,
@@ -216,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 556A8B31264AB0AD00FEE1A8 /* Build configuration list for PBXNativeTarget "VIPER-sampleUITests" */;
 			buildPhases = (
+				2E49F7CC37959A8D2E3F4006 /* [CP] Check Pods Manifest.lock */,
 				556A8B1E264AB0AD00FEE1A8 /* Sources */,
 				556A8B1F264AB0AD00FEE1A8 /* Frameworks */,
 				556A8B20264AB0AD00FEE1A8 /* Resources */,
+				806B78DB3112A6A426386B42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,7 +371,6 @@
 			files = (
 				556A8B11264AB0AD00FEE1A8 /* LaunchScreen.storyboard in Resources */,
 				556A8B0E264AB0AD00FEE1A8 /* Assets.xcassets in Resources */,
-				556A8B0C264AB0AC00FEE1A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,16 +390,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E49F7CC37959A8D2E3F4006 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER-sample-VIPER-sampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		806B78DB3112A6A426386B42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-sample-VIPER-sampleUITests/Pods-VIPER-sample-VIPER-sampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-sample-VIPER-sampleUITests/Pods-VIPER-sample-VIPER-sampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER-sample-VIPER-sampleUITests/Pods-VIPER-sample-VIPER-sampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCD87F00CDC3B67ED10935C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER-sampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1F2FEEB5CB4B9DD774FC308 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER-sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECC15045FCABA6BC8DF5DC59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-sample/Pods-VIPER-sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-sample/Pods-VIPER-sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER-sample/Pods-VIPER-sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		556A8AFD264AB0AC00FEE1A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				556A8B3A264AB10E00FEE1A8 /* AppRouter.swift in Sources */,
+				556A8B58264E9E8600FEE1A8 /* RepositoryDetailViewController.swift in Sources */,
+				556A8B4B264C140900FEE1A8 /* GithubAPI.swift in Sources */,
+				556A8B3E264AC18D00FEE1A8 /* RepositoryEntity.swift in Sources */,
+				556A8B54264E9C5E00FEE1A8 /* RepositoryDetailRouter.swift in Sources */,
 				556A8B3C264AB2A100FEE1A8 /* AppPresenter.swift in Sources */,
-				556A8B09264AB0AC00FEE1A8 /* ViewController.swift in Sources */,
+				556A8B44264C0D1D00FEE1A8 /* SearchRepositoryListRouter.swift in Sources */,
 				556A8B05264AB0AC00FEE1A8 /* AppDelegate.swift in Sources */,
-				556A8B07264AB0AC00FEE1A8 /* SceneDelegate.swift in Sources */,
+				556A8B46264C0F3600FEE1A8 /* SearchRepositoryListInteractor.swift in Sources */,
+				556A8B52264D5B8D00FEE1A8 /* RepositoryCell.swift in Sources */,
+				556A8B4F264D430400FEE1A8 /* UserEntity.swift in Sources */,
+				556A8B42264C0AA500FEE1A8 /* SearchRepositoryListPresenter.swift in Sources */,
+				556A8B40264AC1C700FEE1A8 /* SerchRepositoryListViewController.swift in Sources */,
+				556A8B49264C13C500FEE1A8 /* GithubClient.swift in Sources */,
+				556A8B4D264D417E00FEE1A8 /* SearchResponseEntity.swift in Sources */,
+				556A8B56264E9DFF00FEE1A8 /* RepositoyDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +549,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		556A8B0A264AB0AC00FEE1A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				556A8B0B264AB0AC00FEE1A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		556A8B0F264AB0AD00FEE1A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -481,6 +678,7 @@
 		};
 		556A8B2C264AB0AD00FEE1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04BA4105C6AED54468B9AF1A /* Pods-VIPER-sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -494,12 +692,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aaa.VIPER-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		556A8B2D264AB0AD00FEE1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA433BAC7DE75D9992AED5A /* Pods-VIPER-sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -513,12 +712,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aaa.VIPER-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		556A8B2F264AB0AD00FEE1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3689945D862BADDAB880E130 /* Pods-VIPER-sampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +741,7 @@
 		};
 		556A8B30264AB0AD00FEE1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEAE689E69B48C469474675F /* Pods-VIPER-sampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -563,6 +764,7 @@
 		};
 		556A8B32264AB0AD00FEE1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A1FAE2D25855A76AE86C4A /* Pods-VIPER-sample-VIPER-sampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -583,6 +785,7 @@
 		};
 		556A8B33264AB0AD00FEE1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B672A60D6F6844FCF83E6D5E /* Pods-VIPER-sample-VIPER-sampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

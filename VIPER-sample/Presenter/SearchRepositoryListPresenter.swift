@@ -40,12 +40,15 @@ extension SearchRepositoryListPresenter: SearchRepositoryListPresentation {
     
     private func fetchArticles(searchText: String) {
         guard !searchText.isEmpty else { return }
+        view?.showLoadView()
         articleListInteractor.fetchRepositories(keyword: searchText) { [weak self] result in
             switch result {
             case .success(let repositories):
+                self?.view?.dismissLoadView()
                 self?.view?.updateArticles(repositories)
                 break
             case .failure(let error):
+                self?.view?.dismissLoadView()
                 self?.view?.showError(error: error)
                 break
             }
